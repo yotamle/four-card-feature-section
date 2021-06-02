@@ -1,0 +1,124 @@
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background-color: var(--VeryLightGray);
+    min-height: 100vh;
+    padding-top: 85px;
+}
+
+main {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: var(--GrayishBlue);
+
+}
+
+main h1 {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 200;
+}
+
+main span {
+    display: block;
+    font-weight: 600;
+    color: var(--VeryDarkBlue);
+}
+
+main p {
+    max-width: cal(1440px/2);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--GrayishBlue);
+}
+
+article {
+    width: 25%;
+    height: 250px;
+    display: inline-block;
+    background: white;
+    position: relative;
+    text-align: left;
+    padding: 10px 30px;
+    font-weight: 200;
+    border-top: 5px solid;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px var(--GrayishBlue);
+    margin: 15px;
+
+}
+
+article h2 {
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.5em;
+    color: var(--VeryDarkBlue);
+    margin-bottom: 5px;
+}
+
+article img {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+section article:nth-child(1) {
+    border-top-color: var(--Cyan);
+    transform: translateY(50%);
+}
+
+section article:nth-child(2) {
+    border-top-color: var(--Red);
+}
+
+section article:nth-child(3) {
+    border-top-color: var(--Blue);
+    transform: translateY(50%);
+}
+
+section article:nth-child(4) {
+    border-top-color: var(--Orange);
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 768px) {
+    section article:nth-child(1) {
+        transform: translateY(0%); 
+    }
+    section article:nth-child(3) {
+        transform: translateY(0%); 
+    }
+    article {
+        width: 100%;
+    }
+    body{
+        margin-right: 40px;
+    }
+}
